@@ -9,6 +9,9 @@ There are other scripts and tools that attempt to fix this, but I wanted somethi
 # Setup
 
 1. Copy `makedown/Makefile` to the directory you'll be working in.
+```bash
+wget https://raw.githubusercontent.com/rldotai/makedown/master/makedown/Makefile
+```
 2. Modify the Makefile as desired.
 3. Run `make initialize` to create directories for source, build, and output.
     - The `source` directory is where you should store your Markdown documents as `.md` files.
