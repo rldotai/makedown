@@ -1,0 +1,29 @@
+% Lists ----------------------------------------------------------------------
+% To avoid errors when using deeply nested lists
+\usepackage{enumitem}
+\setlistdepth{9}
+\setlist[itemize,1]{label=$\circ$}
+\setlist[itemize,2]{label=$\circ$}
+\setlist[itemize,3]{label=$\circ$}
+\setlist[itemize,4]{label=$\circ$}
+\setlist[itemize,5]{label=$\circ$}
+\setlist[itemize,6]{label=$\circ$}
+\setlist[itemize,7]{label=$\circ$}
+\setlist[itemize,8]{label=$\circ$}
+\setlist[itemize,9]{label=$\circ$}
+\renewlist{itemize}{itemize}{9}
+
+
+% Using the `enumitem` package
+\setlist[itemize]{noitemsep,leftmargin=0.5cm}
+% ----------------------------------------------------------------------
+
+
+% Title ----------------------------------------------------------------------
+\makeatletter
+\patchcmd{\@maketitle}{\begin{center}}{\begin{flushleft}}{}{}
+\patchcmd{\@maketitle}{\begin{tabular}[t]{c}}{\begin{tabular}[t]{@{}l}}{}{}
+\patchcmd{\@maketitle}{\end{center}}{\end{flushleft}}{}{}
+\makeatother
+% ----------------------------------------------------------------------
+
