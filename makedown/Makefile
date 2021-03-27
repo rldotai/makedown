@@ -108,7 +108,7 @@ pdfs: $(PDF_FILES) $(LATEX_TEMPLATE) $(LATEX_PREAMBLE)
 .PHONY: clean
 clean:
 	rm -f $(BUILD_DIR)/*
-	rm -f $(OUTPUT_DIR)/*
+	rm -f $(OUTPUT_FILES)
 
 ## clean-all:
 ## Remove generated files AND directories
@@ -188,7 +188,8 @@ remove-directories:
 ## Download my cool templates from GitHub
 .PHONY: download-cool-templates
 download-cool-templates:
-	wget https://raw.githubusercontent.com/rldotai/makedown/master/makedown/pandoc-latex.latex -O pandoc-latex.latex
+	wget https://raw.githubusercontent.com/rldotai/makedown/master/makedown/pandoc-latex.latex
+	wget https://raw.githubusercontent.com/rldotai/makedown/master/makedown/pandoc-preamble.tex
 
 ## download-pandoc-templates:
 ## Download the standard pandoc templates from GitHub

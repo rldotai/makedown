@@ -16,10 +16,13 @@ There are other scripts and tools that attempt to fix this, but I wanted somethi
     - `build` is used for the build process, to ensure separation between source/output files and any intermediate files that get generated.
 4. Run `make pdfs`.
 
+## Example
+
+See the `./example` directory, where you will be treated to a first-person account of a README generating a PDF of itself and other paranormal happenings.
+
 ## Customization
 
 Everything's specified in the Makefile, so if you want to change what directories to process or add/remove options for `pandoc`, then that's where you should make your changes.
-By default, there's
 
 If you want to use a custom template, you need to modify the `Makefile` so that it knows where it's located.
 For convenience, I've added rules for downloading the templates provided by the author of `pandoc`, as well as my own slightly customized versions of the same.
@@ -32,7 +35,6 @@ They can be acquired via `make download-pandoc-templates` and `make download-coo
 - I'm assuming you have other standard shell utilities available as well (`sed` and `wget` for example), but these are currently only used for displaying help messages and downloading supporting files if needed.
 - (Optional): For rebuilding on file changes, you can [install `entr`](https://github.com/eradman/entr) and then run `make watch`.
     - It's a useful utility regardless, [with documentatation available here](http://eradman.com/entrproject/).
-
 
 
 # Details
@@ -60,5 +62,6 @@ every time is a bit wearying.
 
 - [ ] Generate HTML files in addition to PDFs.
 - [ ] Make the "cool" templates cooler.
+    - Particularly the preamble.
 - [ ] Automate creating new source files with YAML header
 - [ ] Is there a better way to do help messages?
