@@ -31,6 +31,7 @@
 # ============================================================================
 # Setup
 # ============================================================================
+VERSION := 0.0.2
 
 # Source, build, and output directories
 SOURCE_DIR := source
@@ -120,7 +121,7 @@ clean-all: clean remove-directories
 .PHONY: watch
 watch: pdfs
 	@if command -v entr > /dev/null; then \
-		ls -d $(SRC_FILES) $(LATEX_TEMPLATE) $(LATEX_PREAMBLE) Makefile | entr -s "make pdfs"; \
+		ls -d $(SRC_FILES) $(LATEX_TEMPLATE) $(LATEX_PREAMBLE) Makefile | entr -s "make pdfs --ignore-errors"; \
 	else \
 		echo "entr(1) not installed, cannot watch files..."; \
 	fi

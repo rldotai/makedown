@@ -68,3 +68,12 @@ every time is a bit wearying.
     - Particularly the preamble.
 - [ ] Automate creating new source files with YAML header
 - [ ] Is there a better way to do help messages?
+- [ ] Should I use `latexmk` or does that introduce too much complication?
+- [ ] Automate tests
+    - Does it generate the expected results?
+    - Does the `make watch` aspect function correctly if the input has errors?
+- [ ] Recurse through subdirectories looking for `.md` files
+    - Option for whether to produce outputs in flat directory or to preserve directory structure.
+- [ ] Create a rule for updating the Makefile itself from the source repo
+- [ ] Create a rule in the Makefile for changing the Makefile template paths
+- [ ] Maybe ensure the default is CommonMark
